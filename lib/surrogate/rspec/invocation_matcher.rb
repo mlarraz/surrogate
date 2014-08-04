@@ -8,6 +8,9 @@ class Surrogate
     class InvocationMatcher
       attr_accessor :times_predicate, :with_filter, :surrogate, :method_name
 
+      alias failure_message               failure_message_for_should
+      alias failure_message_when_negated  failure_message_for_should_not
+
       def initialize(method_name)
         self.method_name     = method_name.to_sym
         self.times_predicate = TimesPredicate.new

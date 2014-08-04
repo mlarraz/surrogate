@@ -22,7 +22,7 @@ class Surrogate
         end
 
         def approximate_2_11?
-          Gem::Requirement.create('~> 2.11').satisfied_by? Gem::Version.new(::RSpec::Mocks::Version::STRING)
+          Gem::Requirement.create('>= 2.11').satisfied_by? Gem::Version.new(::RSpec::Mocks::Version::STRING)
         end
       end
 
